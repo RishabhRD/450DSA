@@ -19,3 +19,17 @@ void print(T begin, T end, string message = ""){
   cout << endl;
 }
 
+int max(int* arr, int n){
+  int maxSoFar = 0;
+  int maxEndingHere = 0;
+  f(i, 0, n){
+    maxEndingHere = maxEndingHere + arr[i];
+    if(maxEndingHere > maxSoFar){
+      maxSoFar = maxEndingHere;
+    }
+    if(maxEndingHere < 0){
+      maxEndingHere = 0;
+    }
+  }
+  return maxSoFar;
+}

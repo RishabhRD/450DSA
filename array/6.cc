@@ -19,3 +19,20 @@ void print(T begin, T end, string message = ""){
   cout << endl;
 }
 
+void swap(int& a, int& b){
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+void rotate(int* arr, int n){
+  int temp;
+  for(int i = 1; i < n; i++){
+    swap(arr[i], arr[0]);
+  }
+}
+
+int main()
+{
+  
+}
