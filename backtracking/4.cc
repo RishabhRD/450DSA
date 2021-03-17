@@ -59,11 +59,17 @@ bool isSafe(int grid[N][N], int row,
     && grid[row][col] == 0;
 }
 
-pair<int, int> getNext(int i, int j){
-  if (j == N - 1){
-    return {i + 1, 0};
+bool getNext(int grid[N][N], int& row, int& col){
+  for(int i = 0; i < N; i++){
+    for(int j = 0; j < N; j++){
+      if(grid[i][j] == 0){
+        row = i;
+        col = j;
+        return true;
+      }
+    }
   }
-  return {i, j + 1};
+  return false;
 }
 
 
@@ -76,27 +82,19 @@ void printGrid (int grid[N][N]) {
   }
 }
 
-bool solveSudokuUtil(int grid[N][N], int i, int j){
-  if(i >= N && j>= N){
-    return false;
-  }
-  if(grid[i][j] != 0){
-    auto next = getNext(i, j);
-    return solveSudokuUtil(grid, next.first, next.second);
+bool solveSudokuUtil(int grid[N][N]){
+  int i, j;
+  auto next = getNext(grid, i, j);
+  if(next == false){
+    return true;
   }
   for(int k = 1; k <= 9; k++){
     if(isSafe(grid, i, j, k)){
       grid[i][j] = k;
-      if(i == N-1 && j == N-1){
+      bool result = solveSudokuUtil(grid);
+      if(result)
         return true;
-      }
-      auto next = getNext(i, j);
-      bool result = solveSudokuUtil(grid, next.first, next.second);
-      if(result){
-        return true;
-      }else{
-        grid[i][j] = 0;
-      }
+      grid[i][j] = 0;
     }
   }
   return false;
@@ -104,7 +102,7 @@ bool solveSudokuUtil(int grid[N][N], int i, int j){
 
 
 bool SolveSudoku(int grid[N][N])  { 
-  return solveSudokuUtil(grid, 0, 0);
+  return solveSudokuUtil(grid);
 }
 
 int main()
