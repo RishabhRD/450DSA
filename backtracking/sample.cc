@@ -12,7 +12,7 @@ void print(T ele, string message = ""){
 template<typename T>
 void print(T begin, T end, string message = ""){
   cout<<message;
-  while(begin < end){
+  while(begin != end){
     cout<<*begin<<" ";
     begin++;
   }
