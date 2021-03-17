@@ -29,39 +29,36 @@ bool isPalindrome(string& str){
   return true;
 }
 
-list<list<string>> palindromicPartitionUtil(string currentString, unordered_map<string, list<list<string>>>& stringMapping){
-  if(stringMapping.find(currentString) != stringMapping.end()){
-    return stringMapping[currentString];
-  }
+list<list<string>> palindromicPartition(string currentString){
   int n = currentString.size();
   list<list<string>> returningList;
+  if(n == 0){
+    return returningList;
+  }
+  if(isPalindrome(currentString)){
+    list<string> lst {currentString};
+    returningList.push_back(lst);
+  }
   f(i, 0, n){
-    string firstString = currentString.substr(0, i);
-    string secondString = currentString.substr(i);
+    string firstString = currentString.substr(0, i+1);
+    string secondString = currentString.substr(i+1);
     if(isPalindrome(firstString)){
-      list<list<string>> fromOther = palindromicPartitionUtil(secondString, stringMapping);
+      list<list<string>> fromOther = palindromicPartition(secondString);
       for(auto& lst : fromOther){
         lst.push_front(firstString);
-      }
-      for(auto& lst : fromOther){
         returningList.push_back(lst);
       }
     }
   }
-  stringMapping[currentString] = returningList;
   return returningList;
 }
 
-list<list<string>> palindromicPartition(string currentString){
-  unordered_map<string, list<list<string>>> stringMapping;
-  return palindromicPartitionUtil(currentString, stringMapping);
-}
 
 int main(){
   string str;
   cin>>str;
-  auto returningList = palindromicPartition(str);
-  for(auto& lst : returningList){
-    print(lst.begin(), lst.end());
+  list<list<string>> lst = palindromicPartition(str);
+  for(auto& l : lst){
+    print(l.begin(), l.end());
   }
 }
