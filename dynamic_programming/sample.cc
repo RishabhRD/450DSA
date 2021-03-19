@@ -31,3 +31,11 @@ using ll = long long;
 #define toInt toNumber<int>
 #define toLL toNumber<ll>
 #define toLong toLong<long>
+
+int main()
+{
+  int t;
+  cin>>t;
+  while(t--){
+  }
+}
