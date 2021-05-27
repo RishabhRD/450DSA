@@ -1,1 +1,1 @@
-g++ $1.cc -o bin/$1
+g++ -std=c++2a $1.cc -o bin/$1
