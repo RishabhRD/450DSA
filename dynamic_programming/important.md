@@ -19,3 +19,10 @@ if egg breaks and if it doesn't. Then we take minimum of it.
 
 It is like LIS but we need to sort first basis on first element of pair because
 subsequence is not given in question.
+
+## 24.cc : Maximum size square problem
+
+Thinking of logic that we should put 0 if 1 is not there and min of all 3
+plus one was not thought by me. That is bad. But this logic is being used
+by many questions and I was not able to think of putting 0 thing. I should
+remember it.
