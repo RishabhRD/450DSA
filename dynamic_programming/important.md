@@ -9,3 +9,8 @@ smaller elements in sorted order.
 
 It is important to note that sum should be set to current element if greater
 sum is not possible to reset the sum.
+
+## 23.cc : Egg dropping problem
+
+We minimze attempt in this problem. Here we break problem for the worst  case
+if egg breaks and if it doesn't. Then we take minimum of it.
