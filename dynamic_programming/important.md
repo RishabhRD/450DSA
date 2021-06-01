@@ -32,3 +32,8 @@ remember it.
 Here realizing that it's can be solved with DP if we replace 1 with -1 and 0
 with 1. Then it's just like largest contiguous sum problem. We can use DP
 or kadane algorithm
+
+## 28.cc : Minimum number of jumps
+
+Here DP is not the best solution. Best solution is O(n) and O(1) space, where
+we maintain steps we can make, maximum index we can reach and total jumps.
