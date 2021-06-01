@@ -29,6 +29,7 @@ void printMatrix(const is_container auto &cont) {
     cout << '\n';
   }
 }
+
 template <typename T, std::size_t... Is>
 constexpr std::array<T, sizeof...(Is)>
 create_array(T value, std::index_sequence<Is...>) {
@@ -39,7 +40,6 @@ template <std::size_t N, typename T>
 constexpr std::array<T, N> create_array(const T &value) {
   return create_array(value, std::make_index_sequence<N>());
 }
-
 template <typename T>
 constexpr auto accessor(T& t){
   return [&](int i) -> typename T::value_type&{
@@ -82,36 +82,70 @@ constexpr auto const_matrix_accessor(T& t){
   };
 }
 
+template <typename T>
+using lmt = std::numeric_limits<T>;
 
+int minJumps(const vector<int>& vec){
+  const int size = vec.size();
+  auto at = accessor(vec);
+  vector<int> jumps(size , lmt<int>::max());
+  auto sol = accessor(jumps);
 
-int maxSubstring(const string& S){
-  const int size = S.size();
-  vector<int> vec;
-  for(auto c : S){
-    if(c == '1'){
-      vec.push_back(-1);
-    }else{
-      vec.push_back(1);
+  sol(size - 1) = 0;
+  
+  for(int i = size - 2; i >= 0; i--){
+    for(int j = 0; j < at(i); j++){
+      if(i + j + 1 >= size) break;
+      if(sol(i + j + 1) < sol(i)){
+        sol(i) = sol(i + j + 1) + 1;
+      }
     }
   }
 
-  auto at = const_accessor(vec);
-
-  vector<int> sums(size);
-
-  auto sol = accessor(sums);
-
-  sol(0) = at(0);
-
-  for(int i = 1; i < size; i++){
-    sol(i) = max(sol(i - 1) + at(i), at(i));
-  }
-
-
-  return *max_element(sums.begin(), sums.end());
+  if(sol(0) == lmt<int>::max()) sol(0) = -1;
+  return sol(0);
 }
 
-int main(int argc, const char** argv) {
-  std::cout<<maxSubstring("11000010001")<<std::endl;
-    return 0;
+int minJumpsOn(const vector<int>& vec){
+  const int size = vec.size();
+  auto at = accessor(vec);
+  int maxReach = at(0); // maximum index we can reach
+  int step = at(0); // number of steps we can still take
+  int jump = 1; // number of jumps we have to make
+  if(at(0) == 0){
+    return -1;
+  }
+  for(int i = 1; i < size; i++){
+    if(i == size - 1){
+      return jump;
+    }
+    
+    maxReach = max(maxReach , i + at(i));
+
+    step--;
+
+    if(step == 0){
+      jump ++;
+      if( i >= maxReach ){
+        return -1;
+      }
+      step = maxReach - i;
+    }
+  }
+}
+
+int minJumps(int arr[], int n){
+  vector<int> vec;
+  std::copy(arr, arr + n, std::back_inserter(vec));
+  return minJumpsOn(vec);
+}
+
+int main(){
+  int n;
+  cin>>n;
+  vector<int> vec(n);
+  for(int i = 0; i < n; i++){
+    cin>>vec.at(i);
+  }
+  std::cout<<minJumps(vec)<<std::endl;
 }

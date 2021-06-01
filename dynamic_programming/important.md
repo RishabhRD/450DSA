@@ -26,3 +26,9 @@ Thinking of logic that we should put 0 if 1 is not there and min of all 3
 plus one was not thought by me. That is bad. But this logic is being used
 by many questions and I was not able to think of putting 0 thing. I should
 remember it.
+
+## 27.cc : Maximum difference between 0 and 1
+
+Here realizing that it's can be solved with DP if we replace 1 with -1 and 0
+with 1. Then it's just like largest contiguous sum problem. We can use DP
+or kadane algorithm
