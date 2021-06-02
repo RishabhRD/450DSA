@@ -45,3 +45,8 @@ sorted sequence then we can do better. In O(nlogn) we can do binary search for
 required element. It takes O(1) space. In O(n) we can use dp to store where the
 required element was and start from next (as we assume range is sorted). It
 takes O(n) space.
+
+## 31.cc : Longest common substring
+
+Here substring is asked so we need to look at suffix instead of maintaining
+subsequence. Then we take maximum of all.
