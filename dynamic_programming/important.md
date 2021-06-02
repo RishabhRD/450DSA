@@ -54,3 +54,8 @@ subsequence. Then we take maximum of all.
 ## 32.cc : reach a given score
 
 it is just like coin change problem. DP is like make j with 0 to ith index coins
+
+## 34.cc : kadane's algorithm
+
+solution shows how kadane is just space optimized dp and because subarray is
+there so we use dp of largest suffix
