@@ -50,3 +50,8 @@ takes O(n) space.
 
 Here substring is asked so we need to look at suffix instead of maintaining
 subsequence. Then we take maximum of all.
+
+## 32.cc : reach a given score
+
+Here reptition was not being counted. So, we have apprach where we
+count contribuition of each.
