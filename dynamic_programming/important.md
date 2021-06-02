@@ -53,5 +53,4 @@ subsequence. Then we take maximum of all.
 
 ## 32.cc : reach a given score
 
-Here reptition was not being counted. So, we have apprach where we
-count contribuition of each.
+it is just like coin change problem. DP is like make j with 0 to ith index coins
