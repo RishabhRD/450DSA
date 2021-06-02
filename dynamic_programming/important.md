@@ -37,3 +37,11 @@ or kadane algorithm
 
 Here DP is not the best solution. Best solution is O(n) and O(1) space, where
 we maintain steps we can make, maximum index we can reach and total jumps.
+
+## 30.cc : Minimum removals to make max - min <= k
+
+Here (i, j) DP is not sufficient as it is n^2. Instead We sort but if we get
+sorted sequence then we can do better. In O(nlogn) we can do binary search for
+required element. It takes O(1) space. In O(n) we can use dp to store where the
+required element was and start from next (as we assume range is sorted). It
+takes O(n) space.
