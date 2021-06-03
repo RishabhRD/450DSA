@@ -73,3 +73,11 @@ fine. Recursion goes like for(i : 1, n - 1) contains(0, i) && breakble(i + 1, en
 
 Similar to coin change problem. Just take care that we need to find if any
 subset can make sum/2 (if sum is even). If sum is odd then not possible.
+
+## 40.cc : longest palindromic subsequence
+
+because it is not guaranteed that (i + 1, j) and (i, j - 1) would always be
+defined when computing (i,j) so we instead went for filling table with
+length from 2 to size. (length 1 means answer 1). Inside we iterate i and based
+on length we take j. With this approach it is always guranteed those two will
+be defined.
