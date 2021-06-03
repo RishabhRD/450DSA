@@ -68,3 +68,8 @@ there so we use dp of largest suffix
 
 this is asked in google, microsoft, etc. The DP here is like prefix that is
 fine. Recursion goes like for(i : 1, n - 1) contains(0, i) && breakble(i + 1, end)
+
+## 39.cc : Partition equal problem
+
+Similar to coin change problem. Just take care that we need to find if any
+subset can make sum/2 (if sum is even). If sum is odd then not possible.
