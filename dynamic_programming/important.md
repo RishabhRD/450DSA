@@ -54,6 +54,10 @@ subsequence. Then we take maximum of all.
 ## 32.cc : reach a given score
 
 it is just like coin change problem. DP is like make j with 0 to ith index coins
+In these kinds of problems, we need do something like dp[i][j] has
+some relation with dp[i - 1][j] and dp[i][j - something].
+Here space can be optimized. Instead of O(n^2) space we can have O(n) space
+if we optimize the loop we can use old values of dp[i - 1] in dp[i].
 
 ## 34.cc : kadane's algorithm
 
