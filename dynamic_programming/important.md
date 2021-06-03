@@ -63,3 +63,8 @@ if we optimize the loop we can use old values of dp[i - 1] in dp[i].
 
 solution shows how kadane is just space optimized dp and because subarray is
 there so we use dp of largest suffix
+
+## 37.cc : word break problem
+
+this is asked in google, microsoft, etc. The DP here is like prefix that is
+fine. Recursion goes like for(i : 1, n - 1) contains(0, i) && breakble(i + 1, end)
