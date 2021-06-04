@@ -86,18 +86,43 @@ constexpr auto const_matrix_accessor(T& t){
 template <typename T>
 using lmt = std::numeric_limits<T>;
 
-// at i for a derangment, we have either i can be fixed at some j or i can't be
-// there at j. if fixed at j its i - 2 otherwise its i - 1.
-int numDer(int n){
-  if(n == 1 || n == 2){
-    return n - 1;
+int max_profit(const vector<int>& prices){
+  auto price = accessor(prices);
+  const auto size = prices.size();
+  vector<int> profits(size);
+  auto profit = accessor(profits);
+
+  int max_price = price(size - 1);
+  for(int i = size - 2; i >= 0; i--){
+    max_price = max(max_price, price(i));
+    profit(i) = max(profit(i + 1), max_price - price(i));
   }
-  int first = 0;
-  int second = 1;
-  for(int i = 3; i <= n ; i++){
-    int tmp = (i - 1)*(first + second);
-    first = second;
-    second = tmp;
+
+  int min_price = price(0);
+  for(int i = 1; i < size; i++){
+    min_price = min(min_price, price(i));
+    profit(i) = max(profit(i - 1), profit(i) + price(i) - min_price);
   }
-  return second;
+
+  return profit(size - 1);
+}
+
+int max_profit_optmized(const vector<int>& prices){
+  auto price = accessor(prices);
+  const auto size = prices.size();
+  if(size == 1){
+    return 0;
+  }
+  int profit = 0;
+  for(int i = 1; i < size; i++){
+    if(price(i) > price(i - 1)){
+      profit += (price(i) - price(i - 1));
+    }
+  }
+  return profit;
+}
+
+int main(int argc, const char** argv) {
+  cout << max_profit({1, 2, 3}) << endl;
+    return 0;
 }

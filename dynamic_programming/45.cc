@@ -88,7 +88,7 @@ using lmt = std::numeric_limits<T>;
 
 bool winner(int n, int x, int y){
   vector<bool> dp(n + 1);
-  auto at = accessor(dp);
+  auto sol = accessor(dp);
   sol(0) = false;
   sol(1) = true;
 
