@@ -111,3 +111,11 @@ get. If he doesn't get it then we loose. Based on it we make DP.
 realizing that dr(n) = (n - 1)(dr(n - 1) + dr(n - 2)) is important.
 Why so? if we want derangement of 4. 4 would be at 0 to 3 and i would be at 4.
 if 4 is at i then it is like dr(2) otherwise it is like dr(3)
+
+## 47.cc : max profit
+
+here first we need to think of bruteforce. That is for every i, solution is
+max of (profit from 0 to i and i + 1 to n - 1). Then realizing that if one of
+them would be sotred already we can use it. Instead of calculating it at point.
+That is DP here. But that is not the best solution. Solution is sum of diff of
+all increasing pair
