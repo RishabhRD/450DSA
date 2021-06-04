@@ -86,6 +86,8 @@ constexpr auto const_matrix_accessor(T& t){
 template <typename T>
 using lmt = std::numeric_limits<T>;
 
+// at i for a derangment, we have either i can be fixed at some j or i can't be
+// there at j. if fixed at j its i - 2 otherwise its i - 1.
 int numDer(int n){
   if(n == 1 || n == 2){
     return n - 1;
