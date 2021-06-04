@@ -99,3 +99,9 @@ Here DP is not the best solution. DP can be done as LIS just we need to track
 both increasing and decreasing subseq in arr[2][j].
 Instead this question is more of couting number of peaks. Because if we leave
 any of the peak we don't get the maximum solution.
+
+## 45.cc : coin win the game
+
+This is very important question to know how to use DP for two players game.
+We don't store other player move, instead we think what other player should
+get. If he doesn't get it then we loose. Based on it we make DP.
