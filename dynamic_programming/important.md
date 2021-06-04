@@ -105,3 +105,9 @@ any of the peak we don't get the maximum solution.
 This is very important question to know how to use DP for two players game.
 We don't store other player move, instead we think what other player should
 get. If he doesn't get it then we loose. Based on it we make DP.
+
+## 46.cc : number of derangment
+
+realizing that dr(n) = (n - 1)(dr(n - 1) + dr(n - 2)) is important.
+Why so? if we want derangement of 4. 4 would be at 0 to 3 and i would be at 4.
+if 4 is at i then it is like dr(2) otherwise it is like dr(3)
