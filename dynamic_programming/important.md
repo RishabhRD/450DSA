@@ -1,5 +1,16 @@
 # Important
 
+Concepts:
+
+- if subset is asked then you can think about sort and then you don't have to
+go for j: 1 to i - 1, just i - 1 or some specific condition value can be used.
+
+- if talking about subarray or substring, then think of maintaining suffix
+in dp
+
+- if subsequence is there in same sequence then think of maintaining subseq
+max and j from 1 to i - 1 can be used.
+
 ## 15.cc : Longest Increasing subsequence
 
 We do O(n log n) solution instead of O(n^2) with replacing big elements by
