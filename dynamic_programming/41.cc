@@ -70,7 +70,7 @@ template <typename T> constexpr auto const_matrix_accessor(T &t) {
 template <typename T> using lmt = std::numeric_limits<T>;
 
 long long int countPS(string str) {
-  constexpr int modulo = 1000000007;
+  constexpr int mod = 1000000007;
   const auto at = const_accessor(str);
   const auto size = str.size();
 
@@ -85,9 +85,9 @@ long long int countPS(string str) {
     for(int i = 0; i < size - length + 1; i++){
       auto j = i + length - 1;
       if(at(i) == at(j)){
-        sol(i, j) = 1 + sol(i + 1, j) + sol(i, j - 1);
+        sol(i, j) = (1 + ((sol(i + 1, j) + sol(i, j - 1)) % mod + mod) % mod) % mod;
       }else{
-        sol(i, j) = sol(i + 1, j) + sol(i , j - 1) - sol(i + 1, j - 1); 
+        sol(i, j) = (((sol(i + 1, j) + sol(i , j - 1)) % mod + mod) % mod - sol(i + 1, j - 1)) % mod; 
       }
     }
   }
