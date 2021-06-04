@@ -81,3 +81,10 @@ defined when computing (i,j) so we instead went for filling table with
 length from 2 to size. (length 1 means answer 1). Inside we iterate i and based
 on length we take j. With this approach it is always guranteed those two will
 be defined.
+
+## 43.cc : longest alternative subsequence
+
+Here DP is not the best solution. DP can be done as LIS just we need to track
+both increasing and decreasing subseq in arr[2][j].
+Instead this question is more of couting number of peaks. Because if we leave
+any of the peak we don't get the maximum solution.
