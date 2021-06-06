@@ -119,3 +119,13 @@ max of (profit from 0 to i and i + 1 to n - 1). Then realizing that if one of
 them would be sotred already we can use it. Instead of calculating it at point.
 That is DP here. But that is not the best solution. Solution is sum of diff of
 all increasing pair
+
+## 48.cc : optimal strategy for a game
+
+The second player things that he would give min to first one. first player want
+to earn the max of second player can give. First player can give the first
+coin or last coin so it depends on it.
+so it's like dp(i, j) = max(
+    at(i) + min(dp(i + 2, j), dp(i + 1, j - 1)),
+    at(j) + min(dp(i, j - 2), dp(i + 1, j - 1))
+    )
