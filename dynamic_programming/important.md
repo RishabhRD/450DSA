@@ -129,3 +129,11 @@ so it's like dp(i, j) = max(
     at(i) + min(dp(i + 2, j), dp(i + 1, j - 1)),
     at(j) + min(dp(i, j - 2), dp(i + 1, j - 1))
     )
+
+## 49.cc : optimized BST
+
+Here realizing the dp is on making each node a root and checking in it's prev
+and back would be the point.
+So dp(i, j) would break in dp(i, k -1) and dp(k + 1, j) for each k.
+Also for using levels, we add freqSum(i, j) all time till it has not become
+root. Number of times it is added makes all them in down level.
