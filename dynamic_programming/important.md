@@ -137,3 +137,13 @@ and back would be the point.
 So dp(i, j) would break in dp(i, k -1) and dp(k + 1, j) for each k.
 Also for using levels, we add freqSum(i, j) all time till it has not become
 root. Number of times it is added makes all them in down level.
+
+## 50.cc : buy sell stocks atmost k times
+
+Here first realizing that how to build solution based on dp(k, size) is
+important dp(i, j) = max(dp(i, j -1) , dp(i - 1,k) + price(j) - price(k)) for
+all k in 0 to j is very important. (i represents 0 to k). Here also k can be
+optimized as we can see price(j) is being added based on j.
+But max(dp(i - 1, k) - price(k)) is being added all the times. So, we need to
+maximize the other one. How to do it is same way we get max element of vector.
+We store the max as int\_min and then every step check it.
