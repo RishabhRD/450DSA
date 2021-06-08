@@ -16,3 +16,8 @@ case of no majority.
 
 Here realizing that finding difference in sorted array can be done in O(n)
 is important. We start from 0 and 1 and then proceed on basis of difference.
+
+12.cc : Count triplets with sum smaller than X
+
+Here learning that for finding sum in sorted array can be done in O(n) is
+important.
