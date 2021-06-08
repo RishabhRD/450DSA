@@ -11,3 +11,8 @@ is this: If element is majority, then there must be any element whose count
 of occurance - count of non-occurance return > 0. Also a check needs to be done
 if the element returned is really majority because last index is not checked in
 case of no majority.
+
+9.cc : find pair with given distance
+
+Here realizing that finding difference in sorted array can be done in O(n)
+is important. We start from 0 and 1 and then proceed on basis of difference.
