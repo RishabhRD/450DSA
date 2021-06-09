@@ -30,3 +30,9 @@ Gap method is important here. Just learn it.
 
 Here use of hashmap is important. We need to realize if 0 to i sum is k
 and 0 to j sum is k then i to j sum is also k.
+
+16.cc : sort by bitcount
+
+Here we can use stable\_sort and bitset<32>::count(). However that is
+O(n log(n)). However, we can see that bit count can be between 0 to 31.
+So, we did better. That is counting sort.
