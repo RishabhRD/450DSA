@@ -30,4 +30,3 @@ Gap method is important here. Just learn it.
 
 Here use of hashmap is important. We need to realize if 0 to i sum is k
 and 0 to j sum is k then i to j sum is also k.
-
