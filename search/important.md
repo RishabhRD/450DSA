@@ -22,7 +22,12 @@ is important. We start from 0 and 1 and then proceed on basis of difference.
 Here learning that for finding sum in sorted array can be done in O(n) is
 important.
 
+13.cc : Merge in O(1) space
+
+Gap method is important here. Just learn it.
+
 14.cc : 0 sum subarray
 
 Here use of hashmap is important. We need to realize if 0 to i sum is k
 and 0 to j sum is k then i to j sum is also k.
+
