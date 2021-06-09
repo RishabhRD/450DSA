@@ -87,21 +87,35 @@ constexpr auto const_matrix_accessor(T& t){
 template <typename T>
 using lmt = std::numeric_limits<T>;
 
+int bsearch(vector<int>& nums, int target){
+  int low = 0;
+  int high = nums.size() - 1;
+  while(low <= high){
+    int mid = (low + high) / 2;
+    if(nums.at(mid) == target){
+      return mid;
+    }else if(nums.at(mid) < target){
+      low = mid + 1;
+    }else{
+      high = mid - 1;
+    }
+  }
+  return -1;
+}
+
 int minSwaps(vector<int>& nums) {
   vector<int> copy(nums);
   std::sort(copy.begin(), copy.end());
 
   const int size = nums.size();
-  unordered_map<int, int> index_map;
-  for(int i = 0; i < size; i++){
-    index_map[copy[i]] = i;
-  }
-
   int i = 0;
   int ans = 0;
   while(i < size){
-    if(index_map[nums[i]] != i){
-      swap(nums[i], nums[index_map[nums[i]]]);
+    // could have used hashing but time complexity is same because of sorting
+    // above
+    auto index = bsearch(copy, nums[i]);
+    if(index != i){
+      swap(nums[i], nums[index]);
       ans++;
     }else{
       i++;
