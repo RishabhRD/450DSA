@@ -36,3 +36,10 @@ and 0 to j sum is k then i to j sum is also k.
 Here we can use stable\_sort and bitset<32>::count(). However that is
 O(n log(n)). However, we can see that bit count can be between 0 to 31.
 So, we did better. That is counting sort.
+
+22.cc : kth ele of 2 sorted array
+
+Here binary search over k is awesome and it should be done in very robust
+fashion. It is not only about binary search of k. But also about writing
+code in better way. Realize that we need to bsearch over how many elements
+we can pick from first array.
