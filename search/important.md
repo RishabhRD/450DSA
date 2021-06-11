@@ -43,3 +43,9 @@ Here binary search over k is awesome and it should be done in very robust
 fashion. It is not only about binary search of k. But also about writing
 code in better way. Realize that we need to bsearch over how many elements
 we can pick from first array.
+
+24.cc : Allocate minimum number of pages
+
+Here realizing that binary search would be solution is very important.
+Here binary search is on number of pages we can allocate to m students.
+So, famous question and can come in varieties.
