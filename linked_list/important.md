@@ -1,5 +1,9 @@
 # Important questions
 
+## 1.cc : reverse a linked list of k parts
+
+This takes a good recursion. Read it. It is very Important.
+
 ## 3.cc : Remove loop in linked list
 
 Very important with floyd cycle detection algorithm with slow and fast ptr.
