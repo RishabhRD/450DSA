@@ -111,11 +111,23 @@ int schedule(vector<job>& vec){
   const auto value = [&](int i){
     return vec.at(i).value;
   };
-  const auto searchLess = [&](const int i, const job& j){
-    auto end = std::begin(vec);
-    std::advance(end, i);
-    auto res = std::lower_bound(std::begin(vec), end, j);
-    return (res - std::begin(vec)) - 1;
+  const auto searchLess = [&](const int i){
+    int low = 0;
+    int high = i - 1;
+
+    while(low <= high){
+      int mid = (low + high)/2;
+      if(at(mid).end <= at(i).start){
+        if(at(mid + 1).end <= at(i).start){
+          low = mid + 1;
+        }else{
+          return mid;
+        }
+      }else{
+        high = mid - 1;
+      }
+    }
+    return -1;
   };
   const auto size = vec.size();
   vector<int> dp(size);
@@ -125,7 +137,7 @@ int schedule(vector<job>& vec){
   int ans = value(0);
   for(int i = 1; i < size; i++){
     sol(i) = max(value(i), sol(i - 1));
-    auto j = searchLess(i, at(i));
+    auto j = searchLess(i);
     if(j != -1){
       sol(i) = max(sol(i), value(i) + sol(j));
     }
