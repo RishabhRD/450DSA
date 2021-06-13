@@ -20,3 +20,7 @@ Very important. Can be done in O(n log n).
 
 Very important. How reversing the linked list sometimes help a lot in
 decreasing time complexity.
+
+## 34.cc : nth ele from last
+
+Use of two pointers in different way is illustrated
