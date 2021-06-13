@@ -15,3 +15,8 @@ next is first to get last of loop. And then we set it to nullptr.
 # 12.cc : Merge sort of linked list
 
 Very important. Can be done in O(n log n).
+
+## 32.cc : Delete increasing node in right
+
+Very important. How reversing the linked list sometimes help a lot in
+decreasing time complexity.
