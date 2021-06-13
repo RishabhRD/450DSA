@@ -24,3 +24,4 @@ decreasing time complexity.
 ## 34.cc : nth ele from last
 
 Use of two pointers in different way is illustrated
+
