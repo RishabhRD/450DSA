@@ -15,39 +15,29 @@ struct Node {
   Node *right;
 };
 
-int height(Node* root, unordered_map<Node*, int>& mp){
-  if(root == nullptr){
-    return 0;
-  }
 
-  if(mp.find(root) != mp.end()){
-    return mp[root];
-  }
 
-  mp[root] = max(height(root->left, mp) , height(root->right, mp)) + 1;
-  return mp[root];
+bool isBalanced(Node *root, int& height) {
+  if(root == nullptr) return true;
+  int lh = 0;
+  int rh = 0;
+  if(!isBalanced(root->left, lh)){
+    return false;
+  }
+  if(!isBalanced(root->right, rh)){
+    return false;
+  }
+  height = max(lh, rh) + 1;
+  if(abs(lh - rh) <= 1){
+    return true;
+  }else{
+    return false;
+  }
 }
 
-
-bool isBalanced(Node *root) {
-  if(root == nullptr) return true;
-  unordered_map<Node*, int> mp;
-  bool balanced = true;
-  queue<Node*> q;
-  q.push(root);
-  while(!q.empty()){
-    root = q.front();
-    q.pop();
-    balanced = balanced && (abs(height(root->left, mp) - height(root->right, mp)) <= 1);
-    if(!balanced) return false;
-    if(root->left){
-      q.push(root->left);
-    }
-    if(root->right){
-      q.push(root->right);
-    }
-  }
-  return balanced;
+bool isBalanced(Node* root){
+  int height = 0;
+  return isBalanced(root, height);
 }
 
 int main(int argc, const char** argv) {
