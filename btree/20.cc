@@ -20,7 +20,7 @@ Node* buildTree(int* in, int* pre, int in_begin, int in_end, int pre_index){
   if(in_begin > in_end){
     return nullptr;
   }
-  Node* root = new Node(pre[pre_index]);
+  Node* root = new Node{pre[pre_index], nullptr, nullptr};
   int index = -1;
   for(int i = in_begin; i <= in_end; i++){
     if(in[i] == pre[pre_index]){
