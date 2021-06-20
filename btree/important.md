@@ -12,8 +12,13 @@ Preorder traversal with variant of vertical traversal is mixed.
 
 It's a good problem to see how to break subproblem in tree.
 
-## 20.cc : Build tree from inorder and preorder traversal
+## 19.cc : Build tree from inorder and preorder traversal
 
 Good recursion and logic. Leftmost of preorder is root. Search that in
 inorder. left of search would left of root and right of search would be right
 of root.
+
+## 20.cc : Minimum number of swaps to convert to BST
+
+Inorder of BST is sorted. Make Inorder of tree. Make sort of tree.
+Make minimum number of swaps to make array sorted.
