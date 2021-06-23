@@ -32,3 +32,8 @@ int find_largest(Node* root, unordered_map<Node*, int>& mp){
   mp[root] = max(including_current, not_including_current);
   return mp[root];
 }
+
+int getMaxSum(Node *root) {
+  unordered_map<Node*, int> mp;
+  return find_largest(root, mp);
+}
