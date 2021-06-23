@@ -31,3 +31,7 @@ problem.
 ## 27.cc : Largest subtree
 
 Very important as it can lead to incorrect solution in interview.
+
+## 30.cc : LCA
+
+Good 1 traversal approach is possible.
