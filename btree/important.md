@@ -23,6 +23,10 @@ of root.
 Inorder of BST is sorted. Make Inorder of tree. Make sort of tree.
 Make minimum number of swaps to make array sorted.
 
+## 21.cc : Sum tree
+
+Here leaf should be true was done wrong by me in many attempts.
+
 ## 24.cc : Check if 2 trees are mirror or not
 
 Can use hash map of stack or vector of stack and vector of queue to solve the
