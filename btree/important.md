@@ -35,3 +35,7 @@ Very important as it can lead to incorrect solution in interview.
 ## 30.cc : LCA
 
 Good 1 traversal approach is possible.
+
+## 31.cc : LCA
+
+Min distance between 2 nodes.
