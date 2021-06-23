@@ -39,3 +39,7 @@ Good 1 traversal approach is possible.
 ## 31.cc : LCA
 
 Min distance between 2 nodes.
+
+## 32.cc : kth ancestor
+
+Very importnat recursive approach without hashmap.
