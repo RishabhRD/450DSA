@@ -44,3 +44,35 @@ int kthAncestor(Node *root, int k, int node) {
   }
   return node;
 }
+
+bool kans(Node* root, int& k, int node, int& ans){
+  if(root == nullptr) return false;
+  if(root->data == node){
+    k--;
+    return true;
+  }else{
+    if(kans(root->left, k, node, ans)){
+      if(k == 0){
+        ans = root->data;
+        return false; // This is to break the recursion for further decrementing K unncecessarily
+      }
+      k--;
+      return true;
+    }
+    if(kans(root->right, k, node, ans)){
+      if(k == 0){
+        ans = root->data;
+        return false;
+      }
+      k--;
+      return true;
+    }
+    return false;
+  }
+}
+
+int kthAncestor(Node* root, int k, int node){
+  int ans = -1;
+  kans(root, k, node, ans);
+  return ans;
+}
