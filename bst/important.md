@@ -10,3 +10,7 @@ faster with remembering transplant and successor operations.
 Good use of passing min and max. PostOrder traversal is used.
 
 ## 5.cc : Inorder successor of all nodes
+
+## 12.cc : kth smallest ele using morris traversal
+
+Morris traversal can give you inorder traversal in O(1) space.
