@@ -20,3 +20,7 @@ Morris traversal can give you inorder traversal in O(1) space.
 Importnat as we can do this using BST. Insert from right to left and get
 inorder successor while insertion. Code is beutifully written by me. So, look
 at it. If using balanced BST then it could be done in O(nlogn) itself.
+
+## 17.cc : Interval overlap
+
+It shows the use of interval tree. Use self balancing BST for O(nlogn).
