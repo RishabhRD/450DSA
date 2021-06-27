@@ -24,3 +24,8 @@ at it. If using balanced BST then it could be done in O(nlogn) itself.
 ## 17.cc : Interval overlap
 
 It shows the use of interval tree. Use self balancing BST for O(nlogn).
+
+## 18.cc : Preorder to postorder
+
+Use bound technique here. Very important
+
