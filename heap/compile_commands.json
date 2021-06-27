@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/rishabh/git/450dsa/heap/bin",
+  "command": "/usr/bin/cc    -o CMakeFiles/binary.dir/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c.o -c /home/rishabh/git/450dsa/heap/bin/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c",
+  "file": "/home/rishabh/git/450dsa/heap/bin/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/heap/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/rishabh/git/450dsa/heap/bin/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/rishabh/git/450dsa/heap/bin/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+}
+]
