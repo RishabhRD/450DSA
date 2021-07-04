@@ -97,8 +97,8 @@ int max_stoppage_platforms(vector<pair<int, int>>& vec){
       return a.second < b.second;
       }
       );
-  auto overlap = [](const auto& first, const auto& second){
-    return first.first <= second.second and second.first <= first.second;
+  auto overlap = [](const auto& a, const auto& b){
+    return a.first <= b.second and a.second >= b.first;
   };
   int count = 1;
   int last_selected_index = 0;
