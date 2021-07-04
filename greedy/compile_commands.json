@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/0.cc.o -c /home/rishabh/git/450dsa/greedy/0.cc",
+  "file": "/home/rishabh/git/450dsa/greedy/0.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/1.cc.o -c /home/rishabh/git/450dsa/greedy/1.cc",
+  "file": "/home/rishabh/git/450dsa/greedy/1.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/3.cc.o -c /home/rishabh/git/450dsa/greedy/3.cc",
+  "file": "/home/rishabh/git/450dsa/greedy/3.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/4.cc.o -c /home/rishabh/git/450dsa/greedy/4.cc",
+  "file": "/home/rishabh/git/450dsa/greedy/4.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/5.cc.o -c /home/rishabh/git/450dsa/greedy/5.cc",
+  "file": "/home/rishabh/git/450dsa/greedy/5.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/cc    -o CMakeFiles/binary.dir/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c.o -c /home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c",
+  "file": "/home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/cc    -o CMakeFiles/binary.dir/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.c.o -c /home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.c",
+  "file": "/home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.c"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/greedy/bin",
+  "command": "/usr/bin/c++   -std=c++2a -o CMakeFiles/binary.dir/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/rishabh/git/450dsa/greedy/bin/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+}
+]
