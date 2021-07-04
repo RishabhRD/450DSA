@@ -19,3 +19,7 @@ Here we make transactions of between max\_debitor and max\_creditor.
 We make the minimum transaction between 2. Print it an make amount settled.
 And then we recur for same till we get debitor and creditor of amount 0. That
 means all amounts are settled.
+
+## 11.cc : Minimum cost to cut the board
+
+We cut the more costy edge first so that number of pieces doesn't increase
