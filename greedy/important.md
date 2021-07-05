@@ -23,3 +23,9 @@ means all amounts are settled.
 ## 11.cc : Minimum cost to cut the board
 
 We cut the more costy edge first so that number of pieces doesn't increase
+
+## 32.cc : Smallest number
+
+We do it greedily by taking sum - 1 into account. from right to left is sum > 9
+at any point we make the place 9 otherwise we make the place remaining sum.
+And at last we fill the last first digit by remaining sum + 1.
