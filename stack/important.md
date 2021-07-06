@@ -21,3 +21,9 @@ to bottom of stack.
 
 We take the first element, sort the rest of stack and put the element in front
 of element just smaller than it.
+
+
+## 15.cc : Largest histogram area
+
+Use of stack to find left area and right area for every element in O(n) is
+awesome.
