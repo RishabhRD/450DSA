@@ -16,3 +16,8 @@ be remaining. For that we check if it is actually a celibrity in O(n).
 
 We take the first element, reverse the rest of stack and put the element
 to bottom of stack.
+
+## 14.cc : Sort a stack using recursion
+
+We take the first element, sort the rest of stack and put the element in front
+of element just smaller than it.
