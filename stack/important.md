@@ -11,3 +11,8 @@ smaller than it and print them.
 We push everybody to stack. Then we take 2 out of it check who can't be
 a candidate and eliminate it and push other one again. So at last one would
 be remaining. For that we check if it is actually a celibrity in O(n).
+
+## 13.cc : Reverse stack using recursion
+
+We take the first element, reverse the rest of stack and put the element
+to bottom of stack.
