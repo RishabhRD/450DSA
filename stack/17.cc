@@ -92,7 +92,6 @@ int findMaxLen(string s) {
         st.push(i);
       }else{
         const int top = st.top();
-        st.pop();
         max_result = max(max_result, i - top);
       }
     }
