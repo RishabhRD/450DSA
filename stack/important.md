@@ -27,3 +27,8 @@ of element just smaller than it.
 
 Use of stack to find left area and right area for every element in O(n) is
 awesome.
+
+## 17.cc : Longest valid substring
+
+Pushing index to stack is very important. These are very important way to think
+in questions that needs to remember ordering.
