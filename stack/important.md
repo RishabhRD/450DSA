@@ -41,3 +41,8 @@ way or not.
 ## 25.cc : LRU cache implementation
 
 In hash map we store the iterator of list element to reach there easily.
+
+## 28.cc : Interleave first half and second half of queue
+
+Question only allows to use a stack as data structure. So we need to somehow
+take the first half element in right order to stack and then interleave both.
