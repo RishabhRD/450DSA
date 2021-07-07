@@ -67,3 +67,8 @@ maintain increasing and one we maintain decreasing. Only front of deque
 gives max and min not back because while maintaining increasing, we may have
 deleted the element that is smaller. Deleting the useless element make it
 one traversal for every element.
+
+## bonus.cc : Max of all subarrays of size k
+
+This question gives the way to think 34.cc. We maintain decreasing deque
+giving maximum.
