@@ -51,3 +51,11 @@ take the first half element in right order to stack and then interleave both.
 
 Here we enqueue the petrol pump as we visit. If fuel is low, then we remove the
 petrol pumps from queue.
+
+## 30.cc : Rotten oranges
+
+Here we do BFS and rot every orange in nearby. But we need to do parallel BFS
+because to reach a place there can be other path that is minimal. For that we
+put all the path from where we can start in queue and bfs on same queue.  Now,
+one level processing will happen to all starting element and then go to
+next level. Hence it would be like parallel only.
