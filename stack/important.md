@@ -32,3 +32,8 @@ awesome.
 
 Pushing index to stack is very important. These are very important way to think
 in questions that needs to remember ordering.
+
+## 18.cc : Check for redundant bracket
+
+We push everything in stack except ) and check if we encountered it in right
+way or not.
