@@ -59,3 +59,11 @@ because to reach a place there can be other path that is minimal. For that we
 put all the path from where we can start in queue and bfs on same queue.  Now,
 one level processing will happen to all starting element and then go to
 next level. Hence it would be like parallel only.
+
+## 34.cc : sum of max and min elements of window of size k
+
+Here again we use deque for window size. And this time we use 2 deque. One we
+maintain increasing and one we maintain decreasing. Only front of deque
+gives max and min not back because while maintaining increasing, we may have
+deleted the element that is smaller. Deleting the useless element make it
+one traversal for every element.
