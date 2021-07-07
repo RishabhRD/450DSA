@@ -37,3 +37,7 @@ in questions that needs to remember ordering.
 
 We push everything in stack except ) and check if we encountered it in right
 way or not.
+
+## 25.cc : LRU cache implementation
+
+In hash map we store the iterator of list element to reach there easily.
