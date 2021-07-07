@@ -46,3 +46,8 @@ In hash map we store the iterator of list element to reach there easily.
 
 Question only allows to use a stack as data structure. So we need to somehow
 take the first half element in right order to stack and then interleave both.
+
+## 29.cc : Circular tour
+
+Here we enqueue the petrol pump as we visit. If fuel is low, then we remove the
+petrol pumps from queue.
