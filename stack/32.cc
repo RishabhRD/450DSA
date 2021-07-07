@@ -1,3 +1,4 @@
+#include <deque>
 #include <algorithm>
 #include <array>
 #include <iostream>
@@ -78,10 +79,10 @@ constexpr std::size_t array_size(const T (&)[N]) noexcept {
 
 vector<long long> printFirstNegativeInteger(long long int A[], long long int N,
                                             long long int K) {
-  queue<pair<long long, long long>> q;
-  for(int i = 0; i < N; i++){
+  deque<pair<int, long long>> q;
+  for(int i = 0; i < K; i++){
     if(A[i] < 0){
-      q.push({i, A[i]});
+      q.emplace_back(i, A[i]);
     }
   }
   vector<long long> vec;
@@ -89,15 +90,13 @@ vector<long long> printFirstNegativeInteger(long long int A[], long long int N,
     if(q.empty()){
       vec.push_back(0);
     }else{
-      if(q.front().first <= i + K - 1){
-        vec.push_back(q.front().second);
-      }else{
-        vec.push_back(0);
-      }
-      if(i == q.front().first){
-        q.pop();
+      vec.push_back(q.front().second);
+      if(q.front().first == i){
+        q.pop_front();
       }
     }
+    if(A[i + K] < 0)
+      q.emplace_back(i + K, A[i + K]);
   }
   return vec;
 }
