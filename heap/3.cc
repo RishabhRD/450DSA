@@ -4,6 +4,7 @@
 #include <iterator>
 #include <limits>
 #include <numeric>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -70,9 +71,26 @@ template <typename T> constexpr auto const_matrix_accessor(T &t) {
 
 template <typename T> using lmt = std::numeric_limits<T>;
 
+template <typename T, std::size_t N>
+constexpr std::size_t array_size(const T (&)[N]) noexcept {
+  return N;
+}
+
 vector<int> kLargest(int arr[], int n, int k) {
-  sort(arr, arr + n, greater<int>());
   vector<int> vec;
-  copy_n(arr, k, back_inserter(vec));
+  make_heap(arr, arr + n);
+  auto heap_end = arr + n;
+  for(int i = 0; i < k; i++){
+    pop_heap(arr, heap_end);
+    heap_end--;
+  }
+  copy(heap_end, arr + n, back_inserter(vec));
+  reverse(begin(vec), end(vec));
   return vec;
+}
+
+int main(int argc, const char** argv) {
+  int arr[] = {12, 5, 787, 1, 23};
+  cout << kLargest(arr, size(arr), 4) << endl;
+    return 0;
 }
