@@ -100,5 +100,8 @@ void make_min_heap(node *root) {
   vector<int> inorder_ele;
   inorder(root, [&](node *ele) { inorder_ele.push_back(ele->val); });
   int cur = 0;
-  preorder(root, [&](node *ele) { ele->val = inorder_ele[cur++]; });
+  preorder(root, [&](node *ele) {
+    ele->val = inorder_ele.back();
+    inorder_ele.pop_back();
+  });
 }
