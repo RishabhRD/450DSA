@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/rishabh/git/450dsa/graph/bin",
+  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/1.cc.o -c /home/rishabh/git/450dsa/graph/1.cc",
+  "file": "/home/rishabh/git/450dsa/graph/1.cc"
+}
+]
