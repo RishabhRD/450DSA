@@ -1,7 +1,27 @@
 [
 {
   "directory": "/home/rishabh/git/450dsa/graph/bin",
-  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/1.cc.o -c /home/rishabh/git/450dsa/graph/1.cc",
+  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/1.cc.o -c /home/rishabh/git/450dsa/graph/1.cc",
   "file": "/home/rishabh/git/450dsa/graph/1.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/graph/bin",
+  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/2.cc.o -c /home/rishabh/git/450dsa/graph/2.cc",
+  "file": "/home/rishabh/git/450dsa/graph/2.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/graph/bin",
+  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/3.cc.o -c /home/rishabh/git/450dsa/graph/3.cc",
+  "file": "/home/rishabh/git/450dsa/graph/3.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/graph/bin",
+  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/4.cc.o -c /home/rishabh/git/450dsa/graph/4.cc",
+  "file": "/home/rishabh/git/450dsa/graph/4.cc"
+},
+{
+  "directory": "/home/rishabh/git/450dsa/graph/bin",
+  "command": "/usr/bin/clang++   -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wformat=2 -Wdouble-promotion  -o CMakeFiles/binary.dir/6.cc.o -c /home/rishabh/git/450dsa/graph/6.cc",
+  "file": "/home/rishabh/git/450dsa/graph/6.cc"
 }
 ]

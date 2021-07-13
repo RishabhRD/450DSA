@@ -10,8 +10,6 @@ SET (CMAKE_CXX_FLAGS "-std=c++20 -Wall \
 -Wcast-align \
 -Wunused \
 -Woverloaded-virtual \
--Wconversion \
--Wsign-conversion \
 -Wformat=2 \
 -Wdouble-promotion \
 ")
