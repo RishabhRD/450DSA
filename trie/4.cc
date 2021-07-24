@@ -96,8 +96,7 @@ void init(TrieNode *root) {
 void insert(struct TrieNode *root, string key) {
   const auto size = key.size();
   auto cur_node = root;
-  for (size_t i = 0; i < size; i++) {
-    const char cur_char = key[i];
+  for (const char cur_char : key) {
     if (not contains(cur_node, cur_char)) {
       auto &new_trie_node = get_node(cur_node, cur_char);
       new_trie_node = new TrieNode{};
@@ -111,7 +110,7 @@ void insert(struct TrieNode *root, string key) {
 void recurse_trie(TrieNode *root, string &cur_string,
                   vector<string> &resultant_vector) {
   if(root->isLeaf) resultant_vector.push_back(cur_string);
-  for (int i = 0; i < 26; i++) {
+  for (size_t i = 0; i < 26u; i++) {
     if (root->children[i] == nullptr) {
       continue;
     }
